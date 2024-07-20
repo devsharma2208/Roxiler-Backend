@@ -303,13 +303,13 @@ app.get("/combined", async (req, res) => {
     if (month) {
       const [statistics, barChart, pieChart] = await Promise.all([
         axios.get(
-          `http://localhost:${process.env.PORT}/statistics/?month=${month}`
+          `http://localhost:8000/statistics/?month=${month}`
         ),
         axios.get(
-          `http://localhost:${process.env.PORT}/bar-chart/?month=${month}`
+          `http://localhost:8000/bar-chart/?month=${month}`
         ),
         axios.get(
-          `http://localhost:${process.env.PORT}/pie-chart/?month=${month}`
+          `http://localhost:8000/pie-chart/?month=${month}`
         ),
       ]);
       res.json({

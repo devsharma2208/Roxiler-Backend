@@ -4,7 +4,7 @@ import { DB_NAME } from "../constants.js";
 const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(
-      `${process.env.MONGODB_URI}/${DB_NAME}`,
+      `mongodb+srv://devsharmaelc:dev12345@cluster0.p3xxy6x.mongodb.net/?retryWrites=true&w=majority/${DB_NAME}`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
